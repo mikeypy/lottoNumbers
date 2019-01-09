@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main>
+  <div>
+
+       <div class="container">
+          <h2>Auto Generated Lotto Numbers (Refresh Page to reload numbers)</h2>
+           
+       </div>
+
+       <div class="container">
+        <div class="row">
+         <!--<img src="static/img/device.png">-->
+           <div class="jumbotron">
+            {% for num in numbers %}
+           <div><p>First Number: {{ num.one }} </p></div>
+           <div><p>Second Number: {{ num.two }} </p></div>
+           <div><p>Third Number:  {{ num.three }} </p></div>
+           <div><p>Fourth Number: {{ num.four }} </p></div>
+           <div><p>Fifth Number:  {{ num.five }} </p></div>
+           {% endfor %}
+           <div> <p>Bonus numbers: <b>{{ special.num}} , {{special.num2}}</b></p></div>
+            </div>
+           </div>
+       	
+       </div>
+       
+    </div>
+	
+
+</main>
+{% endblock %}
